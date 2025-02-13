@@ -219,7 +219,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
                     default=self.config_entry.options.get(
                         CONFIG_SCAN_INTERVAL_KEY, 120
                     ),
-                ): vol.All(vol.Coerce(int), vol.Range(min=60, max=1440)),
+                ): vol.All(vol.Coerce(int), vol.Range(min=1, max=1440)),
                 vol.Required(
                     CONFIG_DARK_HOURS_START,
                     default=self.config_entry.options.get(CONFIG_DARK_HOURS_START, 1),
